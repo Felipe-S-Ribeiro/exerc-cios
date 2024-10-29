@@ -1,0 +1,58 @@
+{
+  "funcionarios": [
+    {
+      "id": "1",
+      "nome": "Fulano",
+      "urlFoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf2l4bJzNQBnbaAx5yUJBciqENRQnxf2jtyA&s",
+      "profissao": "DEV",
+      "flgAtivo": true
+    },
+    {
+      "id": "2",
+      "nome": "Sicrano",
+      "urlFoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhCvStLCfeFNSUSyNlPynR0JfE6cRQIR7HTgloY9yLeB5pkmaPj45BHQSlkNN___Eg_po&usqp=CAU",
+      "profissao": "DBA",
+      "flgAtivo": true
+    },
+    {
+      "id": "3",
+      "nome": "Beltrano",
+      "urlFoto": "https://cdn-icons-png.flaticon.com/256/537/537245.png",
+      "profissao": "DBA",
+      "flgAtivo": true
+    },
+    {
+      "id": "4",
+      "nome": "Jurosbalda",
+      "urlFoto": "https://cdn-icons-png.flaticon.com/512/560/560236.png",
+      "profissao": "DESIGNER",
+      "flgAtivo": true
+    },
+    {
+      "id": "5",
+      "nome": "felipe",
+      "urlFoto": "https://cdn-icons-png.flaticon.com/512/560/560236.png",
+      "profissao": "DBA",
+      "flgAtivo": "on"
+    },
+    {
+      "id": "6",
+      "nome": "bolsonaro",
+      "urlFoto": "https://cdn-icons-png.flaticon.com/256/537/537245.png",
+      "profissao": "DESIGNER",
+      "flgAtivo": "on"
+    }
+  ],
+  "empresas": [
+    {
+      "id": "1",
+      "sigla": "conder",
+      "nome": "companhia de desenvolvimento urbano"
+    },
+    {
+      "id": "2",
+      "sigla": "teste",
+      "nome": "testando"
+    }
+  ]
+}

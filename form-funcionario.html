@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova Página</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="nova-pag">
+  <h1>Qualquer coisa</h1>
+  <br>
+  <br>
+  <button id="btn-back">Voltar</button>
+
+  <form id="form-funcionario">
+    <label for="id">ID:</label>
+    <input type="number" id="id" name="id" required><br><br>
+
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required><br><br>
+
+    <label for="url-foto">URL da Foto:</label>
+    <input type="text" id="url-foto" name="url-foto" required><br><br>
+
+    <label for="profissao">Profissão:</label>
+    <select name="profissao" id="profissao" required>
+      <option value="" disabled selected>Selecione uma profissão</option>
+      <option value="designer">DESIGNER</option>
+      <option value="DBA">DBA</option>
+      <option value="Dev">Dev</option>
+    </select><br><br>
+
+    <label for="ativo">Ativo:</label>
+    <input type="checkbox" id="ativo" name="ativo"><br><br>
+
+    <button type="submit">Cadastrar</button>
+  </form>
+
+
+  <script>
+    
+    document.getElementById('form-funcionario').addEventListener('submit', function(event) {
+      event.preventDefault(); // chamando o formulario pelo id dele e adicionando um evento de submissao a ele
+
+      const id = document.getElementById('id').value;
+      const nome = document.getElementById('nome').value;
+      const urlFoto = document.getElementById('url-foto').value;
+      const profissao = document.getElementById('profissao').value;
+      const flgAtivo = document.getElementById('ativo').value;
+
+
+      fetch('http://localhost:3000/funcionarios', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          id: id,
+          nome: nome,
+          urlFoto: urlFoto,
+          profissao: profissao,
+          flgAtivo: flgAtivo,
+        }),
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Funcionário adicionado:', data);
+      })
+      .catch((error) => {
+        console.error('Erro:', error);
+      });
+    }); 
+
+    document.getElementById('btn-back').addEventListener('click', function(){
+      window.location.href = 'index.html';
+    })
+
+  </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    form {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 5px 10px;
+    }
+  </style>
+</body>
+
+</html>

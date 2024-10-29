@@ -1,6 +1,13 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #555;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+
 }
 
 .txt-white {
@@ -45,4 +52,12 @@ body {
 #container-detalhes-funcionario img {
     max-height: 300px;
 
+}
+
+
+
+
+
+.nova-pag {
+  color: white;
 }
